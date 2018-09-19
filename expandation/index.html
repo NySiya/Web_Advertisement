@@ -4,57 +4,30 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Expandable</title>
-     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
-     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-     <style media="screen">
-       .close-expanded {
-         position: absolute;
-         right: -15px;
-         top: -15px;
-         z-index: 9999;
-         width: 50px;
-         height: 50px;
-       }
-     </style>
+     <!-- Latest compiled and minified CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+      <link rel="stylesheet" href="css/expandable.css">
   </head>
   <body>
-    <div class="container">
-      <div class="w-100">
-          <div class="expandable-item collapse show">
-            <button type="button" class="close close-expanded bg-white rounded-circle" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-            <img src="img/placeholder_ads.gif" alt="Advertisement" class="img-fluid w-100" />
-          </div>
+    <div class="expandable-item">
+      <button type="button" class="close close-expanded" aria-label="Close">
+        <img src="img/btn_close.png" class="btn-close" alt="close">
+      </button>
 
-          <div class="w-100">
-            <span class="text-uppercase text-center open-expandable">
-              tab to expand
-              <i class="fas fa-angle-down"></i>
-            </span>
-          </div>
-      </div>
+      <img src="img/fanta.jpg" alt="Advertisement" class="img-responsive img-ads" />
+
+      <span class="text-uppercase text-center open-expandable">
+        tab to expand
+        <i class="fas fa-angle-down"></i>
+      </span>
     </div>
 
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $('.open-expandable').click(function() {
-          $('.expandable-item').collapse('show');
-          $(this).css({ display: 'none' });
-        });
-
-        $('.close-expanded').on('click', function() {
-          console.log('click');
-          $('.expandable-item').collapse('hide');
-          $('.open-expandable').css({ display: 'block' });
-        });
-
-        // $('.close-expanded').trigger('click');
-      });
-    </script>
+    <script type="text/javascript" src="js/expandable.js"></script>
   </body>
 </html>

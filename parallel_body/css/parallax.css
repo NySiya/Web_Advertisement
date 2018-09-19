@@ -1,0 +1,9 @@
+.parallax-container {
+  height: 480px;
+  overflow: hidden;
+}
+
+.jarallax {
+  position: relative;
+  z-index: 0;
+}

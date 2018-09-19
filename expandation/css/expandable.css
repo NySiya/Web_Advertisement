@@ -1,0 +1,35 @@
+.expandable-item {
+  width: 320px;;
+  height: 150px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.close-expanded {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 9999;
+}
+.btn-close {
+  width: 50px;
+  height: 50px;
+}
+.img-ads {
+  width: 100%;
+  height: 440px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.open-expandable {
+  position: absolute;
+  z-index: 9999;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #FFFFFF;
+}
